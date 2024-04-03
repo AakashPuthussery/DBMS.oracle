@@ -170,5 +170,127 @@ SQL> select * from boats;
        102 Intertake	red
        103 Clipper	green
        104 Marre	red
+SQL> /
+Enter value for sid: 22
+Enter value for bid: 101
+Enter value for day: 10/10/98
+old   1: insert into reserved values (&sid,&bid,'&day')
+new   1: insert into reserved values (22,101,'10/10/98')
+
+1 row created.
+
+SQL>insert into reserved(&sid,&bid,'&day');
+Enter value for sid: 22
+Enter value for bid: 102
+Enter value for day: 10/10/98
+old   1: insert into reserved values (&sid,&bid,'&day')
+new   1: insert into reserved values (22,102,'10/10/98')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 22
+Enter value for bid: 103
+Enter value for day: 10/8/98
+old   1: insert into reserved values (&sid,&bid,'&day')
+new   1: insert into reserved values (22,103,'10/8/98')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 22
+Enter value for bid: 104
+Enter value for day: 10/7/98
+old   1: insert into reserved values (&sid,&bid,'&day')
+new   1: insert into reserved values (22,104,'10/7/98')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 31
+Enter value for bid: 102
+Enter value for day: 11/10/98
+old   1: insert into reserved values (&sid,&bid,'&day')
+new   1: insert into reserved values (31,102,'11/10/98')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 31
+Enter value for bid: 103
+Enter value for day: 11/9/98
+old   1: insert into reserved values (&sid,&bid,'&day')
+new   1: insert into reserved values (31,103,'11/9/98')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 31
+Enter value for bid: 104
+Enter value for day: 11/12/98
+old   1: insert into reserved values (&sid,&bid,'&day')
+new   1: insert into reserved values (31,104,'11/12/98')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 64
+Enter value for bid: 101
+Enter value for day: 9/5/98
+old   1: insert into reserved values (&sid,&bid,'&day')
+new   1: insert into reserved values (64,101,'9/5/98')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 64
+Enter value for bid: 102
+Enter value for day: 9/8/98
+old   1: insert into reserved values (&sid,&bid,'&day')
+new   1: insert into reserved values (64,102,'9/8/98')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 74
+Enter value for bid: 103
+Enter value for day: 9/8/98
+old   1: insert into reserved values (&sid,&bid,'&day')
+new   1: insert into reserved values (74,103,'9/8/98')
+
+1 row created.
+
+SQL> select * from reserved;
+
+       SID	  BID DAY
+---------- ---------- --------
+	22	  101 10-10-98
+	22	  102 10-10-98
+	22	  103 10-08-98
+	22	  104 10-07-98
+	31	  102 11-10-98
+	31	  103 11-09-98
+	31	  104 11-12-98
+	64	  101 09-05-98
+	64	  102 09-08-98
+	74	  103 09-08-98
+
+10 rows selected.
+
+SQL> select distinct sname from sailors1;
+SNAME
+------------
+Rusty
+Lubber
+Andy
+Art
+Bob
+Dustin
+Zorba
+Brustus
+Horatio
+
+9 rows selected.
+
 
 
